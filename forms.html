@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Forms</title>
+</head>
+<body>
+
+    link zde : https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-forms.php
+    
+    <div class="m-4 container-sm">
+        <form action="/examples/actions/confirmation.php" method="post">
+            <div class="mb-3">
+                <label class="form-label" for="inputEmail">Email</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="inputPassword">Password</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+            </div>
+            <div class="mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkRemember">
+                    <label class="form-check-label" for="checkRemember">Remember me</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+    </div>
+
+
+    <!-- display horizontally -->
+
+    <div class="m-4">
+        <form action="/examples/actions/confirmation.php" method="post">
+            <div class="row mb-3">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <!-- offeset odsazuje zleva - jako by bylo něco před tím -->
+                <div class="col-sm-10 offset-sm-2">
+                    <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkRemember">
+                            <label class="form-check-label" for="checkRemember">Remember me</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 offset-sm-2">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+<!-- using grid - g3 -->
+    <div class="m-4">
+        <form action="/examples/actions/confirmation.php" method="post">
+            <div class="row align-items-center g-3">
+                <div class="col-auto">
+                    <label class="visually-hidden" for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                </div>
+                <div class="col-auto">
+                    <label class="visually-hidden" for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+                </div>
+                <div class="col-auto">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="checkRemember">
+                        <label class="form-check-label" for="checkRemember">Remember me</label>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+<!-- responzive -->
+    <form>
+        <div class="row align-items-center g-3">
+            <div class="col-md-auto col-12">
+                <label class="form-label d-md-none" for="inputEmail">Email</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+            </div>
+            <div class="col-md-auto col-12">
+                <label class="form-label d-md-none" for="inputPassword">Password</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+            </div>
+            <div class="col-md-auto col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkRemember">
+                    <label class="form-check-label" for="checkRemember">Remember me</label>
+                </div>
+            </div>
+            <div class="col-md-auto col-12">
+                <button type="submit" class="btn btn-warning">Sign in</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- There might be a situation when you just want to display a plain text value next to a form label instead of a working form control. You can do this easily by replacing the class .form-control with the .form-control-plaintext and applying the attribute readonly.
+    -->
+
+<!-- column sizing  -->
+<div class="row g-3">
+    <div class="col-6">
+        <input type="text" class="form-control" placeholder="City">
+    </div>
+    <div class="col-4">
+        <select class="form-select">
+            <option>State</option>
+        </select>
+    </div>
+    <div class="col-2">
+        <input type="text" class="form-control" placeholder="Zip">
+    </div>
+</div>
+
+<!-- inline checkboxes and radio buttnos -->
+<div class="row">
+    <div class="col-12">
+        <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" name="hobbies" id="checkMusic">
+            <label class="form-check-label" for="checkMusic">Music</label>
+        </div>
+        <div class="form-check form-check-inline ms-3">
+            <input type="checkbox" class="form-check-input" name="hobbies" id="checkTravel" checked>
+            <label class="form-check-label" for="checkTravel">Travel</label>
+        </div>
+        <div class="form-check form-check-inline ms-3">
+            <input type="checkbox" class="form-check-input" name="hobbies" id="checkReading" checked>
+            <label class="form-check-label" for="checkReading">Reading</label>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="form-check form-check-inline">
+            <input type="radio" class="form-check-input" name="gender" id="radioMale" checked>
+            <label class="form-check-label" for="radioMale">Male</label>
+        </div>
+        <div class="form-check form-check-inline ms-3">
+            <input type="radio" class="form-check-input" name="gender" id="radioFemale">
+            <label class="form-check-label" for="radioFemale">Female</label>
+        </div>
+    </div>
+</div>
+
+<!-- form text -->
+<label class="form-label" for="inputPassword">Password</label>
+<input type="password" class="form-control" id="inputPassword">
+<div class="form-text">
+    Must be 8-20 characters long, contain letters, numbers and special characters, but must not contain spaces.
+</div>
+
+<!-- disabled options -->
+<div class=" m-4 container-sm">
+<input type="text" class="form-control mb-3" placeholder="Disabled input" disabled>
+<textarea class="form-control mb-3" placeholder="Disabled textarea" disabled></textarea>
+<select class="form-select" disabled>
+    <option>Disabled select</option>
+</select>
+</div>
+
+
+<!-- fieldset disabled -->
+<form>
+    <fieldset disabled>
+        <div class="row mb-3">
+            <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-sm-10 offset-sm-2">
+                <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="checkRemember">
+                        <label class="form-check-label" for="checkRemember">Remember me</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-secondary">Sign in</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<!-- sizeing of forms inputs s form-control-lg(sm) -->
+<div class="row mb-3">
+    <label class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+    <div class="col-sm-10">
+        <input type="email" class="form-control form-control-lg" placeholder="Large input">
+    </div>
+</div>
+<div class="row mb-3">
+    <label class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+        <input type="email" class="form-control" placeholder="Default input">
+    </div>
+</div>
+<div class="row">
+    <label class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+        <input type="email" class="form-control form-control-sm" placeholder="Small input">
+    </div>
+</div>
+
+
+<!-- sizing of select boxes .form-select-lg -->
+<div class="row mb-3">
+    <label class="col-sm-2 col-form-label col-form-label-lg">State</label>
+    <div class="col-sm-10">
+        <select class="form-select form-select-lg">
+            <option>Large select</option>
+        </select>
+    </div>
+</div>    
+<div class="row mb-3">
+    <label class="col-sm-2 col-form-label">State</label>
+    <div class="col-sm-10">
+        <select class="form-select">
+            <option>Default select</option>
+        </select>
+    </div>
+</div>    
+<div class="row">
+    <label class="col-sm-2 col-form-label col-form-label-sm">State</label>
+    <div class="col-sm-10">
+        <select class="form-select form-select-sm">
+            <option>Small select</option>
+        </select>
+    </div>
+</div>
+
+<!-- invalid feedbacks - nutné použít javaScript na konci -->
+<form class="needs-validation" novalidate>
+    <div class="mb-3">
+        <label class="form-label" for="inputEmail">Email</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+        <div class="invalid-feedback">Please enter a valid email address.</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="inputPassword">Password</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+        <div class="invalid-feedback">Please enter your password to continue.</div>
+    </div>
+    <div class="mb-3">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="checkRemember">
+            <label class="form-check-label" for="checkRemember">Remember me</label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+</form>
+
+<script>
+    // Self-executing function
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+
+</body>
+</html>
